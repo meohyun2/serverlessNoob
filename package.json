@@ -1,0 +1,25 @@
+{
+  "name": "serverless-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meohyun2/serverlessNoob.git"
+  },
+  "keywords": [
+    "serverless"
+  ],
+  "author": "meohyun2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meohyun2/serverlessNoob/issues"
+  },
+  "homepage": "https://github.com/meohyun2/serverlessNoob#readme",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}
