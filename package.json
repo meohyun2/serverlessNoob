@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/meohyun2/serverlessNoob#readme",
   "dependencies": {
+    "aws-sdk": "^2.853.0",
+    "fs": "0.0.1-security",
+    "imagemagick": "^0.1.3",
     "moment": "^2.29.1"
   }
 }
