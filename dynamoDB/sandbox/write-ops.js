@@ -6,56 +6,56 @@ AWS.config.update({
 
 const docClient = new AWS.DynamoDB.DocumentClient();
 
-// docClient.put({
-//   TableName: "noob_comments",
-//   Item: {
-//     user_id: "bb",
-//     timestamp: "2010-10-12",
-//     title: "this is second comment",
-//     content: "content"
-//   }
-// },(err, data)=>{
-//   if(err){
-//     console.error(err);
-//   }else{
-//     console.log(data);
-//   }
-// })
+docClient.put({
+  TableName: "noob_comments",
+  Item: {
+    user_id: "bb",
+    timestamp: "2010-10-12",
+    title: "this is second comment",
+    content: "content"
+  }
+},(err, data)=>{
+  if(err){
+    console.error(err);
+  }else{
+    console.log(data);
+  }
+})
 
-// docClient.update({
-//   TableName: "noob_comments",
-//   Key: {
-//     user_id: "bb",
-//     timestamp: "2010-10-12",
-//   },
-//   UpdateExpression: 'set #t = :t',
-//   ExpressionAttributeNames: {
-//     '#t': 'title'
-//   },
-//   ExpressionAttributeValues: {
-//     ':t': 'another title'
-//   },
-// },(err, data)=>{
-//   if(err){
-//     console.error(err);
-//   }else{
-//     console.log(data);
-//   }
-// })
+docClient.update({
+  TableName: "noob_comments",
+  Key: {
+    user_id: "bb",
+    timestamp: "2010-10-12",
+  },
+  UpdateExpression: 'set #t = :t',
+  ExpressionAttributeNames: {
+    '#t': 'title'
+  },
+  ExpressionAttributeValues: {
+    ':t': 'another title'
+  },
+},(err, data)=>{
+  if(err){
+    console.error(err);
+  }else{
+    console.log(data);
+  }
+})
 
-// docClient.delete({
-//   TableName: "noob_comments",
-//   Key: {
-//     user_id: 'bb',
-//     timestamp: "2020-10-12"
-//   }
-// },(err, data)=>{
-//   if(err){
-//     console.error(err);
-//   }else{
-//     console.log(data);
-//   }
-// });
+docClient.delete({
+  TableName: "noob_comments",
+  Key: {
+    user_id: 'bb',
+    timestamp: "2020-10-12"
+  }
+},(err, data)=>{
+  if(err){
+    console.error(err);
+  }else{
+    console.log(data);
+  }
+});
 
 docClient.batchWrite({
   RequestItems: {
